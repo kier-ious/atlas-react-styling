@@ -8,7 +8,7 @@ import { PlayListItem } from "./components/PlayListItem";
 
 export default function MusicPlayer() {
   return (
-    <div className="music-player flex">
+    <div className="music-player flex flex-col items-center">
 
     </div>
   )
