@@ -1,12 +1,18 @@
 import Footer from "./components/Footer";
+import { Playlist } from "./components/Playlist";
 import MusicPlayer from "./MusicPlayer";
 
 
 function App() {
   return (
-    <div className="h-full flex flex-col justify-between p-8 min-h-screen">
-      <MusicPlayer />
-      <Footer />
+    <div className="flex flex-col min-h-screen bg-gray-50 w-full">
+      <main className="flex-grow">
+        <MusicPlayer />
+        <Playlist />
+      </main>
+      <footer className="p-4 text-center">
+        <Footer />
+      </footer>
     </div>
   );
 }
