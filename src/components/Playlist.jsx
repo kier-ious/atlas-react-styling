@@ -16,16 +16,19 @@ const playListInfo = [
 ];
 
 export const Playlist = () => {
+  const currentlyPlaying = 'Painted in Blue';
+
   return (
-    <div className="w-full p-6 mx-auto max-w-screen-md bg-white rounded-lg shadow-md border border-gray-300">
-      <h1 className="text-2xl font-bold mb-4">Playlist</h1>
-        <ul className="space-y-0">
+    <div className="bg-secondary w-full p-6 mx-auto max-w-screen-md rounded-lg shadow-md border border-4 border-accent">
+      <h1 className="font-primary text-2xl font-bold mb-4">Playlist</h1>
+        <ul className="bg-secondary space-y-0">
             {playListInfo.map((song, index) => (
               <PlayListItem
                 key={index}
                 title={song.title}
                 artist={song.artist}
                 length={song.length}
+                isPlaying={song.title === currentlyPlaying}
               />
             ))}
         </ul>
